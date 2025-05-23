@@ -7,15 +7,9 @@ ENDCLASS.
 
 CLASS ZCL_EXECUTE_CLASS IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    DATA: lty_elements TYPE zcl_labb_06_elements=>lty_element_objects.
-    DATA(lo_elements) = NEW zcl_labb_06_elements( ).
-
-     lty_elements-class = 'Class_elements'.
-     lty_elements-instance = 'Instance elements'.
-     lty_elements-reference = 'Reference elements'.
-
-    lo_elements->set_object( ist_objects = lty_elements ).
-
-    out->write( lo_elements->lty_objects ).
+  DATA(lo_account) = NEW zcl_labb_09_account( ).
+  lo_account->set_iban( 'Umbrella-CORP-SL' ).
+  lo_account->get_iban( IMPORTING ev_iban = DATA(lv_iban) ).
+  out->write( lv_iban ).
   ENDMETHOD.
 ENDCLASS.
