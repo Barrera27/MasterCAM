@@ -8,6 +8,7 @@ CLASS zcl_labb_03_contract DEFINITION PUBLIC FINAL CREATE PUBLIC.
   DATA: lv_client TYPE string.
 ENDCLASS.
 
+
 CLASS zcl_labb_03_contract IMPLEMENTATION.
   METHOD set_creation_date.
     me->lv_creation_date = iv_creation_date.
