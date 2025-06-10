@@ -7,5 +7,6 @@ ENDCLASS.
 
 CLASS zcl_execute_class IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
+
   ENDMETHOD.
 ENDCLASS.
